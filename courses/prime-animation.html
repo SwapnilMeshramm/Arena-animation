@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="prime-animation.css">
+
+    <style>
+        /* Mobile Menu Styles */
+        @media (max-width: 768px) {
+            .menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(24, 26, 41, 0.95);
+                backdrop-filter: blur(10px);
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+
+            .menu.active {
+                left: 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links li a {
+                font-size: 18px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.05);
+                border: none;
+                box-shadow: none;
+                padding: 10px 0;
+                margin-top: 10px;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .mobile-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            .mobile-toggle.active {
+                color: #ff6b6b;
+            }
+
+            body.menu-open {
+                overflow: hidden;
+            }
+        }
+    </style>
+
+    <script >(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WVS4WK3B');</script>
+
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVS4WK3B" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <section class="primeAnimation">
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../img2/Logo white.png" alt="Arena Animation Logo"></a>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav-links">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../index.html">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="../courses.html">Courses <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="prime-animation.html">Prime Animation</a></li>
+                                    <li><a href="vfx-prime.html">Prime VFX</a></li>
+                                    <li><a href="graphic-and-web-development.html">Graphic & Web Design</a></li>
+                                    <li><a href="digital-ad-design-and-marketing.html">Digital Marketing</a></li>
+                                    <li><a href="blender-3d-animation-prime.html">3D Animation</a></li>
+                                    <li><a href="ui-ux.html">UI & UX Design</a></li>
+                                    <li><a href="motion-graphic.html">Motion Graphic Design</a></li>
+                                    <li><a href="trinity-3d-program">Short-Term Courses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../admission.html">Admission</a></li>
+                            <li><a href="">Gallery</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="tel:+919657920200" class="call-btn">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Now</span>
+                        </a>
+                        <button class="mobile-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <style>
+            /* Floating Social Media Buttons */
+            .social-iconss {
+                position: fixed;
+                right: 5px;
+                top: 80%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                z-index: 1000;
+            }
+
+            .social-iconss a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                color: white;
+                font-size: 24px;
+                text-decoration: none;
+                border-radius: 50%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .social-iconss a:hover {
+                transform: scale(1.1);
+            }
+
+            .whatsapp {
+                background-color: #25D366;
+            }
+
+            .facebook {
+                background-color: #1877F2;
+            }
+
+            .instagram {
+                background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            }
+        </style>
+
+        <!-- Social Media Icons -->
+        <div class="social-iconss">
+            <a href="https://api.whatsapp.com/send/?phone=919657920200&text&type=phone_number&app_absent=0"
+                target="_blank" class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/arenaanimationngp" target="_blank" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/arenaanimationnagpur/#" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <section class="padTop">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Animation <span>Prime</span></h1>
+                        <p>
+                            Animation Prime is a comprehensive course in the fundamentals and techniques of animation that
+                            provides understanding of the latest software and tools used in the process of animation in the
+                            industry. The course prepares you for an animation career after 12th where you can set your
+                            imagination free. With this course, you will be trained in three key aspects: Creative
+                            Visualization that includes design basics, concepts, sketching and storyboards; 2D animation
+                            concepts, graphics and editing; 3D animation concepts, tools and techniques.
+                        </p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../images/Animation-Film-Banner.png" alt="Animation Prime Course" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="gap">
+        <div class="container">
+            <div class="same-text">
+                <h2>Highlights of Arena Animation <br> <span>Prime Animation Course</span></h2>
+            </div>
+            <div class="flex space-bw mb course-cards-container">
+                <div class="course-card col-33" style="background: url(../images/first.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/intro.png" alt="" />
+                    <h3>Job-oriented Curriculum</h3>
+                    <p>Industry-centric curriculum designed to make you job-ready with the latest animation techniques and practices.</p>
+                </div>
+                <div class="course-card col-33" style="background: url(../images/second.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/desing.png" alt="" />
+                    <h3>Practical Training</h3>
+                    <p>Hands-on practical training using the latest tools and software in the animation industry.</p>
+                </div>
+                <div class="course-card col-33" style="background: url(../images/third.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/relevant.jpg" alt="" />
+                    <h3>Certified Faculty</h3>
+                    <p>Learn from industry-certified faculty with years of experience in animation and multimedia.</p>
+                </div>
+            </div>
+            <div class="flex space-bw mb course-cards-container">
+                <div class="course-card col-33" style="background: url(../images/fourth.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/3dani.png" alt="" />
+                    <h3>Industry Exposure</h3>
+                    <p>Regular industry interactions and workshops to keep you updated with current trends.</p>
+                </div>
+                <div class="course-card col-33" style="background: url(../images/fifth.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/compo.png" alt="" />
+                    <h3>Placement Support</h3>
+                    <p>Comprehensive placement assistance to help you kickstart your career in animation.</p>
+                </div>
+                <div class="course-card col-33" style="background: url(../images/first.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/intro.png" alt="" />
+                    <h3>Onlinevarsity Access</h3>
+                    <p>Get access to our exclusive e-learning platform for additional learning resources.</p>
+                </div>
+            </div>
+            <div class="flex space-bw course-cards-container">
+                <div class="course-card col-33" style="background: url(../images/second.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/desing.png" alt="" />
+                    <h3>Portfolio Platform</h3>
+                    <p>Showcase your work on Creosouls, our dedicated platform for student portfolios.</p>
+                </div>
+                <div class="course-card col-33" style="background: url(../images/third.png);
+                background-repeat: no-repeat;background-position: top right;">
+                    <img src="../images/relevant.jpg" alt="" />
+                    <h3>Student Loan Facility</h3>
+                    <p>Instant student loan facility available to help you fund your studies and pursue your animation career.</p>
+                </div>
+            </div>
+
+            <style>
+                .course-cards-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                .course-card {
+                    flex: 1 1 calc(33.333% - 20px);
+                    padding: 30px;
+                    border-radius: 15px;
+                    background-color: #fff;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    position: relative;
+                    overflow: hidden;
+                    color: #fff;
+                }
+
+                .course-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+                    z-index: 1;
+                }
+
+                .course-card > * {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .course-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                }
+
+                .course-card img {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 20px;
+                    transition: transform 0.3s ease;
+                }
+
+                .course-card:hover img {
+                    transform: scale(1.1);
+                }
+
+                .course-card h3 {
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    color: #fff;
+                }
+
+                .course-card p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.9);
+                }
+
+                @media (max-width: 1024px) {
+                    .course-card {
+                        flex: 1 1 calc(50% - 20px);
+                        padding: 25px;
+                    }
+
+                    .course-card h3 {
+                        font-size: 18px;
+                    }
+
+                    .course-card p {
+                        font-size: 15px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .course-cards-container {
+                        gap: 15px;
+                        padding: 0 15px;
+                    }
+
+                    .course-card {
+                        flex: 1 1 100%;
+                        padding: 20px;
+                        margin-inline: 10px;
+                    }
+
+                    .course-card img {
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 15px;
+                    }
+
+                    .course-card h3 {
+                        font-size: 17px;
+                        margin-bottom: 12px;
+                    }
+
+                    .course-card p {
+                        font-size: 14px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .course-cards-container {
+                        gap: 12px;
+                        padding: 0 10px;
+                    }
+
+                    .course-card {
+                        padding: 15px;
+                        margin-inline: 5px;
+                    }
+
+                    .course-card img {
+                        width: 45px;
+                        height: 45px;
+                        margin-bottom: 12px;
+                    }
+
+                    .course-card h3 {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+
+                    .course-card p {
+                        font-size: 13px;
+                        line-height: 1.5;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <section class="what-you-learn">
+        <div class="container">
+            <div class="same-text">
+                <h2>What You'll Learn</h2>
+            </div>
+            <div class="terms-container">
+                <div class="term-box" onclick="showTermContent('term1')">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>TERM 1</h3>
+                    <p>DESIGN & VISUALISATION</p>
+                </div>
+                <div class="term-box" onclick="showTermContent('term2')">
+                    <i class="fas fa-cube"></i>
+                    <h3>TERM 2</h3>
+                    <p>3D ANIMATION</p>
+                </div>
+                <div class="term-box" onclick="showTermContent('term3')">
+                    <i class="fas fa-magic"></i>
+                    <h3>TERM 3</h3>
+                    <p>ADVANCED 3D ANIMATION</p>
+                </div>
+            </div>
+
+            <div id="term1" class="term-content">
+                <div class="learning-grid">
+                    <div class="learning-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h5>Concepts of Graphics & Illustrations</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-font"></i>
+                        <h5>Typography Design</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h5>Digital Illustrations</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-camera"></i>
+                        <h5>Concepts of Cinematography & Photography</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-film"></i>
+                        <h5>Concepts of 2D Digital Animation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-book"></i>
+                        <h5>Art of Storytelling & Script Writing</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-user"></i>
+                        <h5>Anatomy Study</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h5>Character Design</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-palette"></i>
+                        <h5>Digital Painting</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-video"></i>
+                        <h5>Audio-Video Editing</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h5>Storyboarding & Animatics</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-magic"></i>
+                        <h5>Application of 2D Animation Principles</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h5>Design Portfolio</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-cube"></i>
+                        <h5>Digital Sculpting</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="term2" class="term-content">
+                <div class="learning-grid">
+                    <div class="learning-item">
+                        <i class="fas fa-cube"></i>
+                        <h5>Clay Modeling & Animation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-cubes"></i>
+                        <h5>3D Basics - Modeling to Animation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-cube"></i>
+                        <h5>Digital Modeling with 3ds Max</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h5>Lighting & Texturing Models with 3ds Max</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-film"></i>
+                        <h5>3D Motion Graphics with 3ds max</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-camera"></i>
+                        <h5>Rendering with 3ds max Vray</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-layer-group"></i>
+                        <h5>Digital Compositing</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h5>3D Animation Portfolio</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="term3" class="term-content">
+                <div class="learning-grid">
+                    <div class="learning-item">
+                        <i class="fas fa-cubes"></i>
+                        <h5>3D Basics - Modeling to Animation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-cube"></i>
+                        <h5>Digital Modeling with Maya</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-cube"></i>
+                        <h5>Digital Sculpting</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h5>Texturing 3D Models with Maya</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h5>Lighting & Rendering Models with Maya</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-robot"></i>
+                        <h5>Rigging 3D Models with Maya</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-user"></i>
+                        <h5>3D Character Animation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-fire"></i>
+                        <h5>Fx, Dynamics & Simulation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-video"></i>
+                        <h5>Matchmoving & Camera Tracking</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-users"></i>
+                        <h5>Crowd Simulation</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-camera"></i>
+                        <h5>Working with Arnold Renderer</h5>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h5>Specialisation & Digital Portfolio Development</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../img2/Logo white.png" alt="Arena Animation Logo">
+                    <p>Arena Animation, a pioneer in the global media and entertainment training industry offers
+                        power-packed courses that help you shape your creative career.</p>
+                </div>
+                <div class="footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:enquiry@arenaanimaionnagpur.in">enquiry@arenaanimaionnagpur.in</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="phone-numbers">
+                            <a href="tel:+919637920200">91-9637920200</a> /
+                            <a href="tel:+919657920200">91-9657920200</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>3rd Floor, Samarth Chamber, Near Batukbhai Jewelers, Dharmapeth Nagpur 440010</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../courses.html">Courses</a></li>
+                        <li><a href="../admission.html">Admission</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/arenaanimationngp" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/arenaanimationnagpur/#" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/arena_animation_sonipat/" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h3>Subscribe to Newsletter</h3>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © 2024 Arena Animation Nagpur. All rights reserved.</p>
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIpZQFB0d+4kSC4YaSkxbyo4lw7+yKIAqXTzGYSoysHvCIt7b7QQzZ5voMZ7NgCTe1CXf9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+    <script src="../custom.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const menu = document.querySelector('.menu');
+            const body = document.body;
+
+            if (mobileToggle && menu) {
+                mobileToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    body.classList.toggle('menu-open');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.menu') && !e.target.closest('.mobile-toggle') && menu.classList.contains('active')) {
+                        mobileToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        body.classList.remove('menu-open');
+                    }
+                });
+
+                // Handle dropdown menus in mobile view
+                const dropdowns = document.querySelectorAll('.dropdown > a');
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            this.parentElement.classList.toggle('active');
+                        }
+                    });
+                });
+
+                // Close menu when clicking a link
+                const navLinks = document.querySelectorAll('.nav-links li a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth <= 768) {
+                            mobileToggle.classList.remove('active');
+                            menu.classList.remove('active');
+                            body.classList.remove('menu-open');
+                        }
+                    });
+                });
+            }
+        });
+
+        function showTermContent(termId) {
+            // Hide all term contents
+            document.querySelectorAll('.term-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected term content
+            document.getElementById(termId).classList.add('active');
+            
+            // Update active state of term boxes
+            document.querySelectorAll('.term-box').forEach(box => {
+                box.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Show first term by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showTermContent('term1');
+        });
+    </script>
+</body>
+
+</html>

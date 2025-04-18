@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Arena Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href=""><img src="img2/Logo white.png" alt="Arena Animation Logo"></a>
+                </div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#">Courses <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="courses/prime-animation.html">Prime Animation</a></li>
+                                    <li><a href="courses/vfx-prime.html">Prime VFX</a></li>
+                                    <li><a href="courses/graphic-and-web-development.html">Graphic & Web Design</a></li>
+                                    <li><a href="courses/digital-marketing.html">Digital Marketing</a></li>
+                                    <li><a href="#">3D Animation</a></li>
+                                    <li><a href="#">UI & UX Design</a></li>
+                                    <li><a href="#">Motion Graphic Design</a></li>
+                                    <li><a href="#">Short-Term Courses</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-buttons">
+                    <a href="tel:+919657920200" class="call-btn">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <button class="mobile-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Floating Social Media Buttons -->
+    <div class="social-iconss">
+        <a href="https://api.whatsapp.com/send/?phone=919657920200&text&type=phone_number&app_absent=0"
+            target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/arenaanimationngp" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/arenaanimationnagpur/#" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="parallax">
+        <video autoplay muted loop id="myVideo">
+            <source src="video/contact.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Get in <span>Touch</span></h1>
+                <p>We're here to help you shape your creative future</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="info-cards">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>3rd Floor, Samarth Chamber,<br>Near Batukbhai Jewelers,<br>Dharmapeth Nagpur 440010</p>
+                    <a href="https://maps.google.com" target="_blank" class="direction-btn">
+                        Get Directions
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>We're available Monday to Saturday</p>
+                    <a href="tel:+919657920200" class="phone-link">+91 96579 20200</a>
+                    <a href="tel:+919637920200" class="phone-link">+91 96379 20200</a>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us your queries anytime!</p>
+                    <a href="mailto:enquiry@arenaanimaionnagpur.in" class="email-link">enquiry@arenaanimaionnagpur.in</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-content" data-aos="fade-right">
+                    <div class="form-header">
+                        <h2>Send us a <span>Message</span></h2>
+                        <p>Fill out the form below and we'll get back to you shortly</p>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Full Name</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="subject">Subject</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-bookmark"></i>
+                                    <input type="text" id="subject" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Your Message</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-comment"></i>
+                                <textarea id="message" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="map-container" data-aos="fade-left">
+                    
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.331763555362!2d79.05727447471736!3d21.139191383977543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1fb55ede36f%3A0xe51f013835597c08!2sArena%20Animation!5e0!3m2!1sen!2sin!4v1744965386016!5m2!1sen!2sin" 
+width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade"></iframe>                
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-connect-section">
+        <div class="container">
+            <div class="social-content" data-aos="fade-up">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media for the latest updates</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/arenaanimationngp" target="_blank" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arenaanimationnagpur/" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=919657920200&text&type=phone_number&app_absent=0" style=" background-color: #25D366;" target="_blank" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/arenaanimation-official/" target="_blank" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="img2/Logo white.png" alt="Arena Animation Logo">
+                    <p>Arena Animation, a pioneer in the global media and entertainment training industry offers
+                        power-packed courses that help you shape your creative career.</p>
+                </div>
+                <div class="footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:enquiry@arenaanimaionnagpur.in">enquiry@arenaanimaionnagpur.in</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="phone-numbers">
+                            <a href="tel:+919637920200">91-9637920200</a> / 
+                            <a href="tel:+919657920200">91-9657920200</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>3rd Floor, Samarth Chamber, Near Batukbhai Jewelers, Dharmapeth Nagpur 440010</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/arenaanimationngp" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/arenaanimationnagpur/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919657920200&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/arenaanimation-official/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h3>Subscribe to Newsletter</h3>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © 2024 Arena Animation Nagpur. All rights reserved.</p>
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="custom.js"></script>
+</body>
+
+</html> 
